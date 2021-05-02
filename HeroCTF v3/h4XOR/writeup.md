@@ -1,5 +1,7 @@
 # h4XOR (75 points)
 
+WU author: `inexp-mf`
+
 ## Statement
 >Can you recover the _flag.png_ image?
 
