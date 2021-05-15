@@ -4,15 +4,17 @@ WEB - EASY
 WU author: `inexp-mf`
 
 ## Statement
-> Express.JS is an easy-to-use web framework, but Javascript/Typescript is too slow. C is a fast, low level language, but I was tired of debugging memory issues. Can I get the best out of both worlds by combining them?
-Website
-https://gets.sdc.tf/
-Server Source
+> Express.JS is an easy-to-use web framework, but Javascript/Typescript is too slow. C is a fast, low level language, but I was tired of debugging memory issues. Can I get the best out of both worlds by combining them? \
+Website \
+https://gets.sdc.tf/ \
+Server Source \
 [index.js](index.js)
 
 Author: `KNOX`
 
 ## Solution
+We are given a web access to a C-program called "primegen". It reads a parameter n and tells us either how many prime numbers are less than integer n or says "number malformed" for a variety of reasons.
+
 After reading the statement and looking around for anything that might be intended to be broken, we understand that the primegen might be vulnerable to overflows. It is accessed via `https://gets.sdc.tf/prime?n=`.
 
 Successless attempts that yielded `malformed number` output from the primegen itself:
