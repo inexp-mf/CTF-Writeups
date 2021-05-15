@@ -48,7 +48,7 @@ The remaining question is, what happens here?
 if bytes( (g[i] ^ (a(i) & 0xff) for i in range(len(g))) ) != f:
 ```
 `a(i)` generates the i-th Fibonacci number. `a(i) & 0xff` takes the modulo 256.
-So the variable part of the flag is encoded, xored with Fibonacci numbers mod 256, and this is how f was made.
+So the variable part of the flag is encoded, xored with Fibonacci numbers mod 256, and this is how f was made. \
 Once again for this CTF, xor is a symmetrical transform. If we xor f with the same Fibonacci numbers mod 256, we get the flag:
 ```py
 a = lambda n: a(n-2) + a(n-1) if n >= 2 else (2 if n == 0 else 1)
