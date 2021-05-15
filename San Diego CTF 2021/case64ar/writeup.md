@@ -14,7 +14,7 @@ Author: `k3vin`
 The caption and other clues suggest that two encodings were combined somehow: base64 and Caesar cipher. The question is, how exactly?
 
 The simplest options:
-- Caesar within ASCII, then base64.
+- Caesar within ASCII, then base64. \
 Let's try it out to no avail:
 ```py
 import base64 as b64
@@ -25,8 +25,8 @@ for shift in range(128):
     print(shifted)
 ```
 None of the strings looks like a flag or anything meaningful.
-- base64, then Caesar. 
-Seems unlike because the ciphertext is still in base64 character range. Unless the translation table is not ASCII but the base64 alphabet instead?
+- base64, then Caesar. \
+Seems unlike because the ciphertext is still in base64 character range. Unless the translation table is not ASCII but the base64 alphabet instead? \
 Let's check this one:
 ```py
 import base64 as b64
@@ -43,7 +43,7 @@ for shift in range(len(table)):
 Among others:
 ```b'sdctV{OB3cUr-ty_`\xf1nt_s3\x02UR\x08Ti}'```
 
-We're obviously close. Let's try without `=` in the alphabet:
+We're quite close. Let's try without `=` in the alphabet:
 ```b'sdctf{OBscUr1ty_a1nt_s3CURITy}```
 
 Success!
